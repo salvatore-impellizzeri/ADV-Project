@@ -1,6 +1,13 @@
 {
   "opinions": [
     {
+      "id": 1736252934667,
+      "votes": 0,
+      "userName": "Salvatore",
+      "title": "Mi piace React",
+      "body": "Sto studiando e imparando React tramite questi esercizi"
+    },
+    {
       "id": 1,
       "userName": "Maximilian Schwarzmüller",
       "title": "Do yourself a favor and learn React!",
