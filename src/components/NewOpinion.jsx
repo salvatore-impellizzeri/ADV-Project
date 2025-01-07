@@ -1,5 +1,7 @@
 import { useActionState, use } from "react";
+import { useFormStatus } from "react-dom";
 
+import Submit from "./Submit";
 import { OpinionsContext } from '../store/opinions-context';
 
 export function NewOpinion() {
@@ -91,9 +93,7 @@ export function NewOpinion() {
           )
         }
 
-        <p className="actions">
-          <button type="submit">Submit</button>
-        </p>
+        <Submit />
       </form>
     </div>
   );
