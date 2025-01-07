@@ -9,30 +9,33 @@ export function NewOpinion() {
     let errors = [];
     const namePattern = /^[A-Za-z\s]+$/;
 
-    if(!userName){
-      errors.push('Inserisci il tuo nome');
+    if (!userName) {
+      errors.push("Please enter your name");
     }
 
-    if(userName.length > 30 || userName.length < 2 && userName){
-      errors.push('Il nome deve essere compreso tra 2 e 50 caratteri');
+    if (userName.trim().length > 30 || (userName.trim().length < 2 && userName)) {
+      errors.push("The name must be between 2 and 50 characters");
     }
 
-    if(!namePattern.test(userName) && userName){
-      errors.push('Inserisci un nome valido')
+    if (!namePattern.test(userName) && userName) {
+      errors.push("Please enter a valid name");
     }
 
-    if(!title){
-      errors.push('Inserisci il titolo');
+    if (!title) {
+      errors.push("Please enter a title");
     }
 
-    if(title.length > 50){
-      errors.push('Inserisci un titolo minore di minore o uguale di 50 caratteri');
+    if (title.trim().length > 50) {
+      errors.push("The title must be 50 characters or fewer");
     }
 
-    if(!body){
-      errors.push('Inserisci la tua opinione');
+    if (!body) {
+      errors.push("Please enter your opinion");
     }
 
+    if ((body.trim().length < 10 || body.trim().length > 300) && body) {
+      errors.push("The Opinion must be between 10 and 300 characters");
+    }
 
     if(errors.length > 0){
       return {
